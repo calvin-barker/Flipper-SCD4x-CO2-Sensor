@@ -9,7 +9,7 @@ The connections are pretty straight-forward. Some boards have different form fac
 
 ![Connections](/images/SCD4x_gpio_0.5x.png)
 
-## Connections to the Flipper Zero Wi-Fi Module v1
+## Also connecting to the Flipper Zero Wi-Fi Module v1
 
 The Wi-Fi Module V1 requires only **4 essential pins** for basic operation:
 
@@ -66,6 +66,8 @@ This is **normal startup behavior**. The module is cycling through its function 
 - **Solid color**: Module is active in that specific mode
 - **No LED activity**: Module may be in standby or ready state
 
+![Real-life connections](/images/flipper_scd41_wifi.jpeg)
+
 **Ways to Verify:**
 
 1. **Using ESP32 WiFi Marauder:**
@@ -99,24 +101,6 @@ This is **normal startup behavior**. The module is cycling through its function 
    - Launch the app and try to scan for Wi-Fi networks
    - If the app successfully detects the module and can scan networks, your module is working correctly
 
-3. **Check Firmware Status:**
-   - The Wi-Fi Module V1 requires appropriate firmware to function
-   - If apps don't detect the module, you may need to flash the module with the correct firmware
-   - For ESP32 WiFi Marauder firmware, refer to the official [ESP32 WiFi Marauder documentation](https://github.com/justcallmekoko/ESP32Marauder)
-   - Refer to the official Flipper Zero Wi-Fi Module documentation for firmware installation instructions
-
-4. **Function Switch (if applicable):**
-   - Some Wi-Fi Module V1 boards have a function switch on the PCB
-   - Ensure the switch is set to the desired mode (Wi-Fi mode typically uses the green LED)
-   - The LED should illuminate in the corresponding color when set correctly
-
-5. **Basic Troubleshooting:**
-   - Verify all 4 connections are secure (power, ground, TX, RX)
-   - If using Pin 1 (5V), ensure it's enabled via `GPIO` → `5V on GPIO` → `ON`
-   - Check that the module's firmware is up to date
-   - Try disconnecting and reconnecting the module
-
-If the module shows the LED sequence (blue → green → red → off) but apps can't communicate with it, the issue is likely firmware-related rather than wiring.
 
 ## Contributions
 Contributions are welcome!    
